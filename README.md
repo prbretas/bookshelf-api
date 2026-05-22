@@ -14,3 +14,13 @@ Aplicação full-stack demonstrativa para gerenciamento de livros em uma estante
 
 Este projeto será usado para criar documentação técnica e validar um pipeline CI/CD com GitHub Actions.
 
+## Endpoints
+
+### DELETE /books/:id
+
+Remove um livro por ID.
+
+- `204 No Content` — livro removido com sucesso
+- `404 Not Found` — livro não encontrado
+- `409 Conflict` — livro está com status `reading` e não pode ser removido diretamente
+
